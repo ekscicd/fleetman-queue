@@ -19,6 +19,9 @@ pipeline {
       }
       stage('Build') {
          steps {
+            sh 'wget -O activemq.tar.gz http://archive.apache.org/dist/activemq/5.14.3/apache-activemq-5.14.3-bin.tar.gz'
+            sh 'tar -xzf activemq.tar.gz'
+
             sh '''echo No build required for Queue'''
          }
       }
